@@ -198,8 +198,8 @@ const ConsultingAreas = () => (
           },
           {
             icon: <Stethoscope className="w-10 h-10" />,
-            title: "의료 관련 학과 입시 / 취업 / 의료계 진로 분야",
-            color: "emerald",
+            title: "의료 관련 학과 입시 / 취업",
+            color: "blue",
             items: [
               "현직 치과의사 / 현직 간호사 (Big5, 고려대학교 병원 등)",
               "보건복지부장관상 수상, Apple 근무 경험 멘토"
