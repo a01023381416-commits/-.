@@ -360,7 +360,7 @@ const StatsCounterSection = () => {
   useEffect(() => {
     if (hasStarted) {
       const controls = animate(1, 193, {
-        duration: 0.4,
+        duration: 0.3,
         onUpdate: (value) => setCount(Math.floor(value)),
         ease: "easeOut",
       });
