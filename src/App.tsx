@@ -55,13 +55,16 @@ const Header = () => (
         ))}
       </nav>
 
-      <motion.button 
+      <motion.a 
+        href="http://pf.kakao.com/_sxbYxhX/chat"
+        target="_blank"
+        rel="noopener noreferrer"
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
-        className="bg-dark text-white px-12 py-6 rounded-full text-2xl font-black hover:bg-gray-800 transition-all shadow-lg shadow-black/10"
+        className="bg-dark text-white px-12 py-6 rounded-full text-2xl font-black hover:bg-gray-800 transition-all shadow-lg shadow-black/10 inline-block"
       >
         상담 신청하기
-      </motion.button>
+      </motion.a>
     </div>
   </motion.header>
 );
@@ -113,20 +116,26 @@ const MainHero = () => (
           transition={{ duration: 1, delay: 1.2 }}
           className="flex flex-wrap justify-center gap-10"
         >
-          <motion.button 
+          <motion.a 
+            href="https://blog.naver.com/hj-medi"
+            target="_blank"
+            rel="noopener noreferrer"
             whileHover={{ scale: 1.05, backgroundColor: "#f3f4f6" }}
             whileTap={{ scale: 0.95 }}
-            className="group bg-white text-black px-20 py-10 rounded-full font-black text-4xl flex items-center gap-8 transition-all shadow-2xl shadow-white/10"
+            className="group bg-white text-black px-20 py-10 rounded-full font-black text-4xl flex items-center gap-8 transition-all shadow-2xl shadow-white/10 inline-flex"
           >
-            컨설팅 프로그램 보기 <ArrowRight className="w-10 h-10 group-hover:translate-x-1 transition-transform" />
-          </motion.button>
-          <motion.button 
+            선생님들 이력보기 <ArrowRight className="w-10 h-10 group-hover:translate-x-1 transition-transform" />
+          </motion.a>
+          <motion.a 
+            href="http://pf.kakao.com/_sxbYxhX/chat"
+            target="_blank"
+            rel="noopener noreferrer"
             whileHover={{ scale: 1.05, backgroundColor: "rgba(255,255,255,0.2)" }}
             whileTap={{ scale: 0.95 }}
             className="bg-white/10 backdrop-blur-xl text-white border-2 border-white/40 px-20 py-10 rounded-full font-black text-4xl flex items-center gap-8 transition-all"
           >
             카카오톡 실시간 문의 <MessageSquare className="w-10 h-10" />
-          </motion.button>
+          </motion.a>
         </motion.div>
       </motion.div>
     </div>
@@ -251,7 +260,7 @@ const ConsultingAreas = () => (
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.5 + i * 0.1 }}
-                  className="flex items-start gap-8 text-4xl font-black text-gray-700 leading-snug text-left"
+                  className="flex items-start gap-8 text-3xl font-black text-gray-700 leading-snug text-left"
                 >
                   <CheckCircle2 className={`w-10 h-10 text-${area.color}-600 mt-2 shrink-0`} /> 
                   <div>{item}</div>
@@ -263,7 +272,7 @@ const ConsultingAreas = () => (
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.8 }}
-              className={`bg-${area.color}-50 p-12 rounded-[40px] text-${area.color}-700 text-4xl font-black italic leading-relaxed mx-auto w-fit text-left`}
+              className={`bg-${area.color}-50 p-12 rounded-[40px] text-${area.color}-700 text-3xl font-black italic leading-relaxed mx-auto w-fit text-left`}
             >
               {area.footer}
             </motion.div>
@@ -303,12 +312,12 @@ const IntroSection = () => (
           className="space-y-16"
         >
           <div className="text-4xl font-bold text-gray-400">현직메디는</div>
-          <div className="text-6xl lg:text-8xl font-black leading-tight">
+          <div className="text-5xl lg:text-7xl font-black leading-tight">
             <span className="text-red-600 border-b-8 border-blue-600 pb-2">의학적 전문성</span>과 
             <span className="text-red-600 border-b-8 border-blue-600 pb-2 ml-6">입시 이해도</span>를
           </div>
           <div className="text-4xl font-bold text-gray-400">모두 갖춘</div>
-          <div className="text-6xl lg:text-8xl font-black">
+          <div className="text-5xl lg:text-7xl font-black">
             <span className="text-blue-600">전국 최고 수준</span>의<br />
             메디컬 컨설팅 그룹입니다.
           </div>
@@ -340,7 +349,7 @@ const IntroSection = () => (
               viewport={{ once: true }}
               transition={{ delay: 0.5 + i * 0.1 }}
               whileHover={{ scale: 1.05, y: -5 }}
-              className="px-12 py-6 bg-gray-50 text-blue-600 rounded-3xl text-2xl font-black border border-blue-100 shadow-sm cursor-default"
+              className="px-12 py-6 bg-gray-50 text-blue-600 rounded-3xl text-xl font-black border border-blue-100 shadow-sm cursor-default"
             >
               {tag}
             </motion.span>
@@ -351,7 +360,7 @@ const IntroSection = () => (
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 1.2 }}
-          className="text-5xl font-black text-gray-800"
+          className="text-4xl font-black text-gray-800"
         >
           <span className="border-b-8 border-blue-600 pb-2">전국 최고 수준의 컨설턴트</span>만 고집합니다.
         </motion.div>
@@ -392,8 +401,7 @@ const StatsCounterSection = () => {
           className="text-left flex-1"
         >
           <h2 className="text-5xl md:text-7xl font-black mb-10 leading-tight">
-            현직메디와 함께 만든 <br />
-            <span className="text-blue-500">압도적인 결과</span>
+            현직메디와 함께한 <span className="text-blue-500">압도적인 결과</span>
           </h2>
           <p className="text-xl md:text-2xl font-black tracking-[0.5em] opacity-40 uppercase">
             TOTAL SUCCESSFUL CANDIDATES
@@ -436,7 +444,7 @@ const ValueCards = () => (
           className="bg-gray-50 p-20 rounded-[48px] border border-gray-100 flex flex-col items-center text-center justify-center min-h-[400px]"
         >
           <div className="text-xl text-gray-400 font-bold mb-10">정보는 누구나 줄 수 있습니다.</div>
-          <div className="text-5xl font-black leading-tight">
+          <div className="text-4xl font-black leading-tight">
             결과는 아무나<br />만들 수 없습니다.
           </div>
         </motion.div>
@@ -449,7 +457,7 @@ const ValueCards = () => (
           className="bg-blue-600 p-20 rounded-[48px] shadow-2xl shadow-blue-600/30 flex flex-col items-center text-center justify-center text-white min-h-[400px]"
         >
           <div className="text-xl text-white/70 font-bold mb-10">현직메디는 '정보'만 제공하지 않습니다.</div>
-          <div className="text-5xl font-black leading-tight">
+          <div className="text-4xl font-black leading-tight">
             결과를 설계하고,<br />실제로<br />만들어 냅니다.
           </div>
         </motion.div>
@@ -462,8 +470,8 @@ const ValueCards = () => (
         transition={{ duration: 1, delay: 0.5 }}
         className="mt-40 text-center space-y-12"
       >
-        <p className="text-4xl md:text-6xl font-bold italic text-gray-700">"혼자 준비하는 순간, 방향은 흔들립니다."</p>
-        <p className="text-4xl md:text-6xl font-black text-blue-600">"현직 전문가와 함께하면 결과는 달라집니다."</p>
+        <p className="text-3xl md:text-5xl font-bold italic text-gray-700">"혼자 준비하는 순간, 방향은 흔들립니다."</p>
+        <p className="text-3xl md:text-5xl font-black text-blue-600">"현직 전문가와 함께하면 결과는 달라집니다."</p>
       </motion.div>
     </div>
   </section>
@@ -491,7 +499,7 @@ const ServiceGrid = () => (
           {
             title: "학습 전략 컨설팅",
             subtitle: "LEARNING STRATEGY",
-            desc: <>성적은 노력의 문제가 아니라 전략의 문제입니다. 의대 합격자들의 실제 데이터를 기반으로<br />최적화된 학습 전략을 설계합니다.</>,
+            desc: <>성적은 노력의 문제가 아니라 전략의 문제입니다.<br />의대 합격자들의 실제 데이터를 기반으로 최적화된 학습 전략을 설계합니다.</>,
             items: [
               "내신 / 수능 맞춤형 학습 로드맵",
               <>과목별 성적 상승 전략<br />(이해/암기/풀이 구조화)</>,
@@ -507,7 +515,7 @@ const ServiceGrid = () => (
           {
             title: "학생부 설계 컨설팅",
             subtitle: "STUDENT RECORD",
-            desc: <>학생부는 단순한 기록이 아닙니다. 현직 입학사정관의 평가 기준을 기반으로<br />지원자의 학생부를 합격형 구조로 재구성합니다.</>,
+            desc: <>학생부는 단순한 기록이 아닙니다.<br />현직 입학사정관의 평가 기준을 기반으로 지원자의 학생부를 합격형 구조로 재구성합니다.</>,
             items: [
               "세특 방향 설정 및 전략적 활동 설계",
               "전공 적합성 기반 스토리라인 구축",
@@ -523,7 +531,7 @@ const ServiceGrid = () => (
           {
             title: "지원 전략 컨설팅",
             subtitle: "APPLICATION STRATEGY",
-            desc: <>합격은 성적이 아니라 전략에서 결정됩니다. 실제 합격 데이터와 평가 기준을 기반으로<br />합격 확률을 극대화하는 지원 설계를 제공합니다.</>,
+            desc: <>합격은 성적이 아니라 전략에서 결정됩니다.<br />실제 합격 데이터와 평가 기준을 기반으로 합격 확률을 극대화하는<br />지원 설계를 제공합니다.</>,
             items: [
               "지원 가능 대학 및 전형 정밀 분석",
               "안정 / 적정 / 상향 전략 설계",
@@ -539,7 +547,7 @@ const ServiceGrid = () => (
           {
             title: "면접 집중 컨설팅",
             subtitle: "INTERVIEW FOCUS",
-            desc: <>면접은 지식보다 평가 기준을 아는 사람이 합격합니다.<br />현직 입학사정관과 의료인이 함께 합격형 답변 구조를 완성합니다.</>,
+            desc: <>면접은 지식보다 평가 기준을 아는 사람이 합격합니다.<br />현직 입학사정관과 의료인이 함께<br />합격형 답변 구조를 완성합니다.</>,
             items: [
               <>의대 / 치대 / 간호 기출 및<br />예상 질문 분석</>,
               <>답변 구조 설계<br />(논리 + 스토리 + 전달력)</>,
@@ -574,7 +582,7 @@ const ServiceGrid = () => (
               <div className="text-blue-400 font-black text-base tracking-[0.2em] mb-6 uppercase">{service.subtitle}</div>
               <h3 className="text-6xl font-black mb-10 tracking-tight">{service.title}</h3>
               <div className="flex justify-center mb-16">
-                <p className="text-gray-400 leading-relaxed text-4xl font-bold text-left">
+                <p className="text-gray-400 leading-relaxed text-3xl font-bold text-left">
                   {service.desc}
                 </p>
               </div>
@@ -587,7 +595,7 @@ const ServiceGrid = () => (
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.5 + i * 0.1 }}
-                    className="flex items-center gap-6 text-gray-200 font-black text-3xl"
+                    className="flex items-center gap-6 text-gray-200 font-black text-2xl"
                   >
                     <div className="w-3 h-3 bg-blue-500 rounded-full" />
                     {item}
@@ -598,12 +606,12 @@ const ServiceGrid = () => (
 
             <div className="pt-16 border-t border-white/10 grid grid-cols-2 gap-12">
               <div>
-                <div className="text-xl font-black text-gray-400 uppercase tracking-wider mb-6">차별화 포인트</div>
-                <div className="text-3xl font-black text-white">{service.footer.point}</div>
+                <div className="text-lg font-black text-gray-400 uppercase tracking-wider mb-6">차별화 포인트</div>
+                <div className="text-2xl font-black text-white">{service.footer.point}</div>
               </div>
               <div>
-                <div className="text-xl font-black text-gray-400 uppercase tracking-wider mb-6">기대 결과</div>
-                <div className="text-3xl font-black text-white">{service.footer.result}</div>
+                <div className="text-lg font-black text-gray-400 uppercase tracking-wider mb-6">기대 결과</div>
+                <div className="text-2xl font-black text-white">{service.footer.result}</div>
               </div>
             </div>
           </motion.div>
@@ -655,7 +663,7 @@ const ProcessSection = () => (
             >
               <GraduationCap className="w-10 h-10" />
             </motion.div>
-            <h3 className="text-4xl font-black text-gray-900">의대 입시</h3>
+            <h3 className="text-3xl font-black text-gray-900">의대 입시</h3>
           </div>
           <ul className="space-y-10">
             {[
@@ -697,7 +705,7 @@ const ProcessSection = () => (
             >
               <Hospital className="w-10 h-10" />
             </motion.div>
-            <h3 className="text-4xl font-black text-gray-900">의료 관련 학과 입시 / 취업</h3>
+            <h3 className="text-3xl font-black text-gray-900">의료 관련 학과 입시 / 취업</h3>
           </div>
           <ul className="space-y-10">
             {[
@@ -747,7 +755,7 @@ const ConsultingProcess = () => (
           {
             num: "1",
             title: <>1:1 전담<br />현직 멘토 배정</>,
-            desc: "분야별 최적의 전문가 매칭",
+            desc: <>분야별<br />최적의 전문가 매칭</>,
             icon: <Users className="w-8 h-8" />
           },
           {
@@ -759,7 +767,7 @@ const ConsultingProcess = () => (
           {
             num: "3",
             title: <>실행 점검<br />+ 피드백 반복</>,
-            desc: "지속적인 관리와 습관 교정",
+            desc: <>지속적인 관리와<br />습관 교정</>,
             icon: <Target className="w-8 h-8" />
           },
           {
@@ -860,20 +868,26 @@ const CTASection = () => (
         transition={{ duration: 1, delay: 0.8 }}
         className="flex flex-wrap justify-center gap-10"
       >
-        <motion.button 
+        <motion.a 
+          href="https://blog.naver.com/hj-medi"
+          target="_blank"
+          rel="noopener noreferrer"
           whileHover={{ scale: 1.05, y: -5 }}
           whileTap={{ scale: 0.95 }}
-          className="bg-white text-blue-600 px-20 py-10 rounded-[32px] font-black text-4xl hover:bg-blue-50 transition-all shadow-2xl"
+          className="bg-white text-blue-600 px-20 py-10 rounded-[32px] font-black text-4xl hover:bg-blue-50 transition-all shadow-2xl inline-block"
         >
-          상담 신청하기
-        </motion.button>
-        <motion.button 
+          선생님들 이력보기
+        </motion.a>
+        <motion.a 
+          href="http://pf.kakao.com/_sxbYxhX/chat"
+          target="_blank"
+          rel="noopener noreferrer"
           whileHover={{ scale: 1.05, y: -5 }}
           whileTap={{ scale: 0.95 }}
-          className="bg-blue-500 text-white border-4 border-white/30 px-20 py-10 rounded-[32px] font-black text-4xl hover:bg-blue-400 transition-all"
+          className="bg-blue-500 text-white border-4 border-white/30 px-20 py-10 rounded-[32px] font-black text-4xl hover:bg-blue-400 transition-all inline-block"
         >
           카카오톡 문의
-        </motion.button>
+        </motion.a>
       </motion.div>
     </div>
   </section>
@@ -899,26 +913,11 @@ const Footer = () => (
             </motion.div>
             <span className="text-4xl font-black tracking-tighter">현직메디</span>
           </div>
-          <p className="text-gray-500 text-3xl font-black leading-relaxed max-w-2xl">
+          <p className="text-gray-500 text-2xl font-black leading-relaxed max-w-2xl">
             현직 전문가들이 직접 설계하는 프리미엄 메디컬 컨설팅.<br />
             우리는 단순한 정보를 넘어 결과를 만들어냅니다.
           </p>
-          <div className="flex gap-12 mt-16">
-            {["Blog", "Instagram", "Youtube"].map((s, idx) => (
-              <motion.a 
-                key={s} 
-                href="#" 
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.5 + idx * 0.1 }}
-                whileHover={{ y: -3, color: "#fff" }}
-                className="text-gray-500 font-black text-2xl transition-colors"
-              >
-                {s}
-              </motion.a>
-            ))}
-          </div>
+
         </motion.div>
 
         <div className="grid grid-cols-2 gap-16">
@@ -929,7 +928,7 @@ const Footer = () => (
             transition={{ duration: 1, delay: 0.2 }}
           >
             <h4 className="font-black text-3xl mb-12">컨설팅 서비스</h4>
-            <ul className="space-y-8 text-2xl text-gray-500 font-black">
+            <ul className="space-y-8 text-xl text-gray-500 font-black">
               {["학습 전략 컨설팅", "학생부 설계 컨설팅", "지원 전략 컨설팅", "면접 집중 컨설팅"].map((item, idx) => (
                 <motion.li 
                   key={idx} 
@@ -948,11 +947,11 @@ const Footer = () => (
             transition={{ duration: 1, delay: 0.4 }}
           >
             <h4 className="font-black text-3xl mb-12">현직메디 정보</h4>
-            <div className="space-y-6 text-gray-500 font-black text-2xl">
+            <div className="space-y-6 text-gray-500 font-black text-xl">
               <p>대표자명: 최은혜</p>
               <p>사업자번호: 241-15-02729</p>
               <p>hj-medi@naver.com</p>
-              <p>서울 성동구 독서당로 270</p>
+              <p>서울시 성동구 독서당로 270, 105동 1702호</p>
             </div>
           </motion.div>
         </div>
@@ -963,7 +962,7 @@ const Footer = () => (
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 1, delay: 0.8 }}
-        className="pt-16 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-12 text-2xl text-gray-500 font-black"
+        className="pt-16 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-12 text-xl text-gray-500 font-black"
       >
         <p>© 2025 현직메디. All rights reserved.</p>
         <div className="flex gap-16">
